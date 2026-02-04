@@ -1,0 +1,60 @@
+# 6GAMER PRO - TECHNICAL DOCUMENTATION
+
+## 📚 Project Overview
+6GAMER is a high-performance, fullstack gaming platform designed with a premium "Royal Gold" aesthetic. It features 7 core games with real-time global leaderboards, achievement systems, and an advanced admin dashboard.
+
+## 🛠️ Tech Stack
+- **Frontend**: Next.js 15.3.5 (App Router), React 19, Framer Motion (Animations), Tailwind CSS 4.
+- **Backend**: Firebase (Firestore for real-time data, Auth for security, Storage for assets).
+- **Database Logic**: Drizzle ORM for local data management.
+- **Icons & UI**: Lucide React, Shadcn/UI patterns.
+- **Communication**: Nodemailer for OTP/Email services.
+
+## 📂 Project Structure
+- `src/app/`: Contains all page routes (Home, Games, Leadership, Login, Admin).
+- `src/components/games/`: Core logic for every game (BallMaze, Ludo, Snake, etc.).
+- `src/app/api/`: Backend API routes for stats, leaderboards, and user management.
+- `src/lib/`: Firebase configuration and shared utility hooks.
+
+## 🕹️ Game Logic Breakdown
+
+### 1. Ludo King (Royal Edition)
+- **Logic**: Implements full Ludo board rules (15x15 grid).
+- **AI System**: A priority-based scoring algorithm (`calculateBestMove`):
+  - **Tier 1 (1,000,000 pts)**: Move that reaches HOME.
+  - **Tier 2 (500,000 pts)**: Move that hits/captures an opponent's piece.
+  - **Tier 3 (300,000 pts)**: Deploying a new piece from the base.
+  - **Tier 4 (100,000 pts)**: Landing on a "Safe Spot" (Star).
+- **Mechanics**: Space/Enter to roll, 1-4 keys to select pieces.
+
+### 2. Ball Maze (Precision Movement)
+- **Logic**: Canvas-based rendering with grid collision.
+- **Features**: 
+  - **Fog of War**: A radial gradient hides parts of the maze.
+  - **Magnet Power-up**: Uses distance-based attraction to pull coins toward the player.
+  - **Moving Walls**: Level 5+ introduces dynamic obstacles that bounce between walls.
+- **Infinite Play**: Levels advance indefinitely; time is unlimited.
+
+### 3. Bird Fly (Physics-based)
+- **Logic**: Simple gravity and velocity simulation (`requestAnimationFrame`).
+- **Mechanics**: Tap/Space to apply upward force. Score increases as you pass through golden pillars.
+
+### 4. Ghost Kill (Reflex)
+- **Logic**: Time-based spawning. Ghosts appear at random coordinates; users must click/hover to "slay" them before they vanish.
+
+## 🎨 UI/UX Features
+- **Animations**: Uses `framer-motion` for scroll-reveal sections, 3D game card rotations, and smooth page transitions.
+- **Theme**: Custom CSS variables for `gold-gradient` and `galaxy-bg` provide a royal feel.
+- **Performance**: Heavy use of `memo`, `useCallback`, and `useRef` to ensure 60 FPS gameplay.
+
+## 🔐 Auth & Security
+- **Firebase Auth**: Secure login/signup with session persistence.
+- **Admin Mode**: Special access for `admin@6gamer.com` to test games even when "Coming Soon" or disabled.
+- **OTP Verification**: Email-based verification for password resets.
+
+## 📊 Database & Stats
+- **Firestore**: Stores live high scores and user profiles.
+  - **Leadership**: Real-time aggregation of the top 100 players globally with auto-sliding scoring view (5s interval).
+  - **Achievements**: Automated triggers when users reach milestones (e.g., "100 Wins", "Speed Demon").
+  - **Project Report**: Comprehensive BCA Minor Project Report generated (`MINOR_PROJECT_REPORT.md`).
+

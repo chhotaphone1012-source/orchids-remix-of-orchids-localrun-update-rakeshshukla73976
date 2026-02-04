@@ -1,0 +1,35 @@
+# 6GAMER PRO - PREMIUM GAMING PLATFORM
+
+## 🚀 PLATFORM STATUS
+- **Website Name**: 6GAMER (Global Update)
+- **Core Games**: 7 Active (Ludo King, Ball Maze, Ghost Kill, Bird Fly, Snake Pro, Typing Master, Word Maker)
+- **Coming Soon**: 3 Advanced (Car Racing, Puzzles, Memory Game)
+- **Tiers**: 10 Levels of Mastery per Game
+- **Performance**: 60 FPS requestAnimationFrame Rendering
+
+## 🎨 AESTHETIC & UI
+- **Theme**: Ultra-Premium Gold & Galaxy Aesthetic
+- **Dashboard Features**: Mirror Mode, Dynamic Themes (Retro Gold, Cyber Neon, Hyper Glow)
+- **Announcement Banner**: Live announcements directly on the User Dashboard
+- **Visuals**: Framer Motion 3D transitions, gold-border glows, and shimmer effects
+- **Navigation**: Improved Admin Toggle Sidebar with better visibility and scrolling
+
+## 🛠️ ADMIN CAPABILITIES
+- **Announcement System**: Real-time banner management via /admin
+- **Banner Sync**: Firestore-backed live updates for site-wide announcements
+- **Control**: Enable/Disable games instantly
+- **Navigator Sidebar**: Fixed layout for full visibility of controls
+
+## 👤 USER ECOSYSTEM
+- **Profile CRUD**: Edit Name, Username, Bio, and Location
+- **Photo Upload**: Secure avatar management via Firebase Storage
+- **Stats**: Real-time Battle Log and Legendary XP tracking
+- **Achievements**: Multi-tier achievement system
+
+## 🕹️ GAME MECHANICS (REFINED)
+- **Ludo King**: Full board game logic with AI and 2-4 player local modes.
+- **Bird Fly**: Easy-flow gravity, infinite play mode, no timers.
+- **Ball Maze**: Discrete precision movement, goal-based progression.
+- **Snake Pro**: Speed multipliers, phase mode, infinite growth.
+- **Word Maker**: Full-screen focus, theme-based puzzles, simplified UI.
+- **Typing Master**: High-speed accuracy tracking, focus mode, infinite typing.
